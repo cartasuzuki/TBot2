@@ -8,7 +8,7 @@ import matplotlib.image as mpimg
 import pandas as pd
 from cv2 import *
 from objectdetection import ObjectDetection
-
+import time
 
 
 
@@ -61,7 +61,7 @@ def ShowImageWithBoundingBoxes(imagefilename, predictions):
             draw.rectangle([(x_min,y_min ), (x_max, y_max)], fill=None, width=3, outline ="red")
 
     image.show()
-
+    time.sleep(10)
 
 def PrintPredictions(predictions, labels_filename):
     with open(labels_filename) as f:
